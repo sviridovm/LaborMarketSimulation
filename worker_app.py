@@ -50,7 +50,7 @@ class WorkerApp:
 
     def calculate_average_salaries(self):
         avg_salaries = {}
-        salaries_by_edu = {edu: [] for edu in constants.education}
+        salaries_by_edu = {edu: [] for edu in constants.st.session_state.education}
 
         for worker in self.workers:
             # if worker.education_level not in salaries_by_edu:
