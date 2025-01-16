@@ -110,7 +110,8 @@ if st.button("Apply Changes"):
         
         st.session_state.SIMULATION_READY = False
         
-        del st.session_state.labor_market
+        if 'labor_market' in st.session_state:      
+            del st.session_state.labor_market
         
         st.success("Changes applied successfully!")
     else:
